@@ -1,0 +1,22 @@
+%%mocodo
+:
+User: num_user, name, password, created_at, updated_at
+:::
+Tag: num_tag, name, created_at, updated_at
+:
+peut_être: #num_tag > Tag > num_tag, _#num_product > Product > num_product
+:
+Category: num_category, name, created_at, updated_at
+:
+
+
+:::
+Order: num_order, num_invoice, status, created_at, updated_at, #num_user > User > num_user
+:::
+Product: num_product, name, quantity, status, created_at, updated_at, #num_category > Category > num_category
+:::
+
+
+:::::
+peut_avoir: #num_product > Product > num_product, _#num_order > Order > num_order, quantité
+:::::

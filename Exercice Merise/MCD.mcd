@@ -1,0 +1,15 @@
+a, 11> Order, 0N User
+User: num_user, name, password, created_at, updated_at
+:
+Tag: num_tag, name, created_at, updated_at
+peut_être, 0N> Tag, 0N> Product
+:
+Category: num_category, name, created_at, updated_at
+peut_être_dans, 0N Category, 01> Product
+
+Order: num_order, num_invoice, status, created_at, updated_at
+:
+Product: num_product, name, quantity, status, created_at, updated_at
+
+
+peut_avoir, 0N> Product, 1N> Order :quantité
